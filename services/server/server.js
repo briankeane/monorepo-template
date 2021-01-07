@@ -1,16 +1,16 @@
-"use strict";
+'use strict';
 
-const app = require("express")();
-const bodyParser = require("body-parser");
-const morgan = require("morgan");
-const addRoutes = require("./api/routes");
-const logger = require("./lib/logger");
+const app = require('express')();
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const addRoutes = require('./api/routes');
+const logger = require('./lib/logger');
 
-const PORT = process.env.PORT || "10020";
+const PORT = process.env.PORT || '10020';
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(morgan("dev"));
+app.use(morgan('dev'));
 
 addRoutes(app);
 
