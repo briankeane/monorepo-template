@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "env-cmd -f .env-test mocha \"./{,!(node_modules)/**}/*.test.js\" --recursive --exit",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "assert": "^2.0.0",
     "chai": "^4.2.0",
+    "eslint": "^7.17.0",
     "mocha": "^8.2.1",
     "sinon": "^9.2.3",
     "supertest": "^6.0.1"
